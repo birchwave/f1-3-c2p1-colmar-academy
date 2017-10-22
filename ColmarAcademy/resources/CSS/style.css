@@ -1,0 +1,516 @@
+/* ColmarAcademy 22.10.2017 */
+/* Author: Thomas Reichler */
+
+/* ENTIRE DOCUMENT: FONT SETTINGS: */
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Rubik", sans-serif;
+}
+
+/* ENTIRE DOCUMENT: Some basic settings: */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.4em;
+}
+
+.footnote {
+  margin-top: 0.9rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+/* ENTIRE DOCUMENT: SMALL BOXES CLASS="TOPIC" */
+/* (used in sections keep-practicing and thisis-exhibit) */
+
+.topic-container {
+  flex-direction: column;
+  width: 40%;
+}
+
+.topic {
+  flex-direction: row;
+  align-items: center;
+}
+
+.topic .image {
+  flex-direction: column;
+  flex-basis: 35%;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin: 0.5rem 0rem 0.5rem 0.5rem;
+}
+
+.topic .text {
+  flex-direction: column;
+  margin-left: 0.5rem;
+}
+
+.topic img {
+  width: 100%;
+  height: auto;
+}
+
+/* SECTION: HEADER */
+header {
+  display; flex;
+  flex-direction: row;
+}
+
+header nav {
+  display: flex;
+  margin: 1rem 1rem;
+  height: 2rem;
+}
+
+header a {
+  display: flex;
+  align-items: center;
+  margin: 0rem 0.5rem;
+}
+
+header .logo {
+  color: grey;
+  font-weight: 200;
+}
+
+header .logo em {
+  color: black;
+  font-weight: bold;
+}
+
+header img {
+  width: auto;
+  height: 100%;
+  display: block;
+}
+
+@media only screen and (min-width: 631px) {
+  header .desktop-only {
+    display:flex;
+  }
+  header .mobile-only {
+    display: none;
+  }
+  header a:first-child {
+    flex-grow: 1;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  header .desktop-only {
+    display:none;
+  }
+  header .mobile-only {
+    display: flex;
+  }
+  header nav {
+    justify-content: space-between;
+  }
+}
+
+/* SECTION: LEARN-NEW (LEARN SOMETHING NEW EVERYDAY) */
+
+#learn-new {
+  background-color: LightGrey;
+}
+
+#learn-new img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#learn-new .content  {
+  width: 20rem;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+#learn-new h1 {
+  margin-bottom: 1.5rem;
+  line-height: 1.4em;
+}
+
+#learn-new h2 {
+  margin: 0;
+  line-height: 1.4em;
+}
+
+#learn-new p {
+  font-size: 1.17rem;
+}
+
+#learn-new .content a {
+  width: 100%;
+  height: 2rem;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 2rem;
+  color: white;
+  background-color: #404040;
+  display: block;
+  margin-top: 1.5rem;
+}
+
+@media only screen and (min-width: 631px) {
+
+  #learn-new {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  #learn-new .img-container {
+    width: 60%;
+    height: auto;
+    margin: 2rem 1.5rem;
+    flex-shrink: 1;
+  }
+
+  #learn-new .content-container  {
+    width: 40%;
+  }
+
+}
+
+@media only screen and (max-width: 630px) {
+
+  #learn-new {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+  }
+
+  #learn-new .img-container {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  #learn-new .content-container  {
+    width: 100%;
+  }
+
+  #learn-new .content a {
+    background-color: #808080;
+    margin-bottom: 2rem;
+  }
+
+}
+
+/* SECTION: KEEP-PRACTICING (IT DOESN'T HURT TO KEEP PRACTICING) */
+
+#keep-practicing {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+#keep-practicing h1 {
+  margin: 2rem 0 1.5rem 0;
+  line-height: 1.4em;
+}
+
+#keep-practicing h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#keep-practicing .img-container {
+  width: 100%;
+}
+
+#keep-practicing a {
+  margin-top: 0.9rem;
+  color: blue;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 631px) {
+
+  #keep-practicing .flex-desktop,
+  #keep-practicing .flex {
+    display: flex;
+  }
+
+  #keep-practicing .flex-mobile {
+    display: none;
+  }
+
+ #keep-practicing .teaser-container {
+    flex-direction: column;
+    flex-shrink: 1;
+    width: 60%;
+    margin: 0rem 1.5rem 2rem 1.5rem;
+  }
+
+  #keep-practicing .topic:last-child {
+    background-color: LightGrey;
+  }
+
+  #keep-practicing .topic .image {
+    display: block;
+  }
+
+  #keep-practicing img {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 630px) {
+
+  #keep-practicing .flex-desktop {
+    display: none;
+  }
+
+  #keep-practicing .flex-mobile,
+  #keep-practicing .flex {
+    display: flex;
+  }
+
+   #keep-practicing .topic-container {
+     width: 100%;
+    }
+
+    #keep-practicing .topic {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 1rem 0;
+    }
+
+    #keep-practicing .topic .image {
+      width: 100%;
+      flex-shrink: 0;
+      margin: 1rem 0;;
+    }
+
+    #keep-practicing img {
+      margin: 1rem 0;
+    }
+
+}
+
+/* SECTION: START-LEARNING (START LEARNING) */
+
+#start-learning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#start-learning h1 {
+  padding: 1rem 0 1.5rem 0;
+  margin:  1rem 0 0.5rem 0;
+}
+
+#start-learning .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 75rem;
+  margin: 0 4rem 3rem 4rem;
+}
+
+#start-learning a {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20rem;
+  flex-shrink: 0;
+  flex-grow: 1;
+  margin: 0.5rem;
+}
+
+#start-learning .tag {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#start-learning .topic {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+#start-learning .text {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem
+}
+
+#start-learning img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media only screen and (min-width: 631px) {
+
+  #start-learning {
+    background-color: LightGrey;
+    margin: 0 1rem;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+
+  #start-learning .flex-desktop {
+    display: none;
+  }
+
+  #start-learning .topic {
+    background-color: LightGrey;
+  }
+
+  #start-learning h1 {
+    font-size: 1.5rem;
+    margin:  0;
+  }
+
+  #start-learning h2 {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+  #start-learning .content {
+    margin: 0 0 2rem 0;
+  }
+
+}
+
+/* SECTION: THESIS-EXHIBIT (THESIS EXHIBIT) */
+
+#thesis-exhibit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#thesis-exhibit .content-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#thesis-exhibit .teaser-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#thesis-exhibit .video-container {
+  width: 100%;
+  height: auto;
+}
+
+#thesis-exhibit video {
+  width: 100%;
+  height: auto;
+}
+
+#thesis-exhibit h1 {
+  padding: 1rem 0 1.5rem 0;
+  margin:  1rem 0 0.5rem 0;
+}
+
+@media only screen and (min-width: 631px) {
+
+  #thesis-exhibit .flex,
+  #thesis-exhibit .flex-desktop {
+    display: flex;
+  }
+
+  #thesis-exhibit .teaser-container {
+     flex-direction: column;
+     flex-shrink: 1;
+     width: 60%;
+     margin: 0rem 1.5rem 2rem 1.5rem;
+   }
+
+   #thesis-exhibit .topic .image {
+     display: block;
+   }
+}
+
+@media only screen and (max-width: 630px) {
+
+  #thesis-exhibit .flex,
+  #thesis-exhibit .flex-desktop {
+    display: none;
+  }
+
+}
+
+/* SECTION: FOOTER */
+
+footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+footer span {
+  font-size: 0.7rem;
+  margin-left: 1rem;
+}
+
+footer {
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 631px) {
+  footer .desktop-only {
+    display:flex;
+  }
+  footer .mobile-only {
+    display: none;
+  }
+  footer span:first-child {
+    flex-grow: 1;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  footer .desktop-only {
+    display:none;
+  }
+  footer .mobile-only {
+    display: flex;
+  }
+}
+
+/* ENTIRE DOCUMENT: BORDERS FOR TESTING */
+/* .b5 { border: 1px dotted rgb(0,223,242) } /* light blue */
+/* .b4 { border: 1px dotted rgb(0,252,13) } /* light green */
+/* .b3 { border: 1px dashed rgb(229,215,0) } /* yellow */
+/* .b2 { border: 1px solid rgb(252,143,2) } /* orange */
+/* .b1 { border: 1px solid rgb(242,7,0) } /* red */
